@@ -27,6 +27,7 @@
 
 
             <ImageButton
+                android:id="@+id/agendaButton"
                 android:src="@drawable/homepage_agenda"
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
@@ -96,6 +97,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/drawer"
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
