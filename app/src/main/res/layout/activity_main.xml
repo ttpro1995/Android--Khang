@@ -95,14 +95,33 @@
 
     </LinearLayout>
 
-
-    <ListView
+    <LinearLayout
         android:layout_width="240dp"
         android:layout_height="match_parent"
-        android:id="@+id/DrawerListViewMain"
+        android:orientation="vertical"
         android:layout_gravity="left"
         android:background="#ff32f2f4"
+        >
 
-        ></ListView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_topbanner"
+            android:scaleType="fitCenter"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/DrawerListViewMain"
+
+            android:background="#ff32f2f4">
+        </ListView>
+
+
+
+
+    </LinearLayout>
+
 
 </android.support.v4.widget.DrawerLayout>

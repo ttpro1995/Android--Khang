@@ -1,17 +1,48 @@
 package com.ttpro.haha.khang;
 
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    list = (ListView) findViewById(R.id.DrawerListViewMain);
+        ArrayList<Drawable> arr = new ArrayList<Drawable>() ;
+        Drawable agenda = getResources().getDrawable(R.drawable.menu_agenda);
+        Drawable attendess = getResources().getDrawable(R.drawable.menu_attendess);
+        Drawable excursion = getResources().getDrawable(R.drawable.menu_excursion);
+        Drawable home = getResources().getDrawable(R.drawable.menu_home);
+        Drawable partners = getResources().getDrawable(R.drawable.menu_partners);
+        Drawable speaker = getResources().getDrawable(R.drawable.menu_speakers);
+        Drawable venues = getResources().getDrawable(R.drawable.menu_venue);
+
+       arr.add(home);
+       arr.add(agenda);
+        arr.add(venues);
+        arr.add(speaker);
+        arr.add(attendess);
+        arr.add(partners);
+        arr.add(excursion);
+
+        CustomMenuAdapter adapter = new CustomMenuAdapter(this,R.layout.drawer_item,arr);
+        list.setAdapter(adapter);
+
     }
 
 
