@@ -31,7 +31,6 @@ public class MainActivity extends ActionBarActivity {
         Drawable partners = getResources().getDrawable(R.drawable.menu_partners);
         Drawable speaker = getResources().getDrawable(R.drawable.menu_speakers);
         Drawable venues = getResources().getDrawable(R.drawable.menu_venue);
-
        arr.add(home);
        arr.add(agenda);
         arr.add(venues);
@@ -39,7 +38,6 @@ public class MainActivity extends ActionBarActivity {
         arr.add(attendess);
         arr.add(partners);
         arr.add(excursion);
-
         CustomMenuAdapter adapter = new CustomMenuAdapter(this,R.layout.drawer_item,arr);
         list.setAdapter(adapter);
 
@@ -50,6 +48,8 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        //TODO: set a button to open drawer
+
         return true;
     }
 
